@@ -6,7 +6,7 @@ interface IProps {
   params: { locale: string };
 }
 
-export default async function Films() {
+export default function Films() {
   // unstable_setRequestLocale(locale);
   return <FilmsPage />;
 }

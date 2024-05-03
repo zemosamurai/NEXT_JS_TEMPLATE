@@ -6,7 +6,7 @@ interface IProps {
   params: { film_id: string; locale: string };
 }
 
-export default async function Film({ params: { film_id, locale } }: IProps) {
+export default function Film({ params: { film_id, locale } }: IProps) {
   // unstable_setRequestLocale(locale);
   return <FilmPage film_id={film_id} />;
 }
