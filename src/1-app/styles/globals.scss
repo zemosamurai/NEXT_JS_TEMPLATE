@@ -1,0 +1,62 @@
+@use "reset";
+@use "theme/light";
+@use "theme/dark";
+
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-semi-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+
+  --fs-xs: 12px;
+  --fs-s: 14px;
+  --fs-m: 16px;
+  --fs-l: 19px;
+  --fs-xl: 24px;
+  --fs-xll: 32px;
+}
+
+body {
+  color: var(--primary-color);
+  background-color: var(--background);
+  font-weight: var(--fw-medium);
+}
+
+h1 {
+  font-size: var(--fs-xll);
+  font-weight: var(--bold);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semi-bold);
+}
+
+h3 {
+  font-size: var(--fs-l);
+}
+
+h4 {
+  font-size: var(--fs-m);
+}
+
+h5 {
+  font-size: var(--fs-s);
+}
+
+h6 {
+  font-size: var(--fs-xs);
+}
+
+p,
+span {
+  font-size: var(--fs-m);
+  font-weight: var(--fw-normal);
+}

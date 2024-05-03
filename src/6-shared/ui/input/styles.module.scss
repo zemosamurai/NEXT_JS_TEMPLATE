@@ -1,0 +1,98 @@
+.container {
+  position: relative;
+
+  .placeholder {
+    position: absolute;
+    left: 12px;
+    color: #777876;
+    transition: all 0.3s ease;
+  }
+
+  .focus {
+    top: 15% !important;
+    transform: translateY(0);
+    font-size: 10px;
+  }
+
+  .leftIconPlaceholder {
+    top: 50%;
+    left: 44px;
+    transform: translateY(-50%);
+  }
+
+  .leftIcon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  }
+
+  .input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 12px;
+
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+
+    background-color: #f8f8f8;
+    border: #a5a5a3 solid 1px;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+
+  .disabled {
+    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.12);
+    background-color: #f9f9f9;
+  }
+
+  .filled {
+    color: #666;
+    border: #f8f8f8 solid 1px;
+  }
+
+  .valid {
+    border: #4bb34b solid 1px !important;
+  }
+
+  .error {
+    background-color: #faebeb;
+    border: #e64646 solid 1px !important;
+  }
+
+  .leftIconInput {
+    padding-left: 40px !important;
+  }
+
+  .rightIconInput {
+    padding-right: 40px !important;
+  }
+
+  .rightIconInputIsShowClear {
+    padding-right: 80px !important;
+  }
+
+  .floatingLabelInput {
+    padding-top: 28px;
+  }
+
+  .rightIcon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  .rightIconIsShowClear {
+    right: -80px;
+  }
+
+  .clearIcon {
+    position: absolute;
+    top: 50%;
+    right: -110px;
+    transform: translateY(-50%);
+  }
+}

@@ -3,22 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev -p 8080",
+    "start": "next start -p 8080",
+    "build:prod": "copy .env.prod .env.local && next build && npm run postbuild",
+    "build:dev": "copy .env.dev .env.local && next build && npm run postbuild",
+    "postbuild": "next-sitemap",
+    "lint": "next lint",
+    "prettier": "prettier -w ."
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "axios": "^1.6.8",
+    "classnames": "^2.5.1",
+    "next": "14.1.4",
+    "next-auth": "^4.24.7",
+    "next-intl": "^3.11.3",
+    "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.4"
+    "react-hook-form": "^7.51.3",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.1.4"
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "next-sitemap": "^4.2.3",
+    "prettier": "^3.2.5",
+    "sass": "^1.74.1",
+    "typescript": "^5"
   }
 }

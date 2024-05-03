@@ -1,0 +1,76 @@
+.button {
+  position: relative;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 120px;
+  padding: 10px;
+
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--text-primary);
+
+  background-color: var(--btn-bg-primary);
+  border: var(--btn-bg-primary) solid 2px;
+  border-radius: 8px;
+
+  fill: var(--text-primary);
+  stroke: var(--text-primary);
+
+  &:focus {
+    position: relative;
+    outline: none;
+  }
+
+  &:focus::after {
+    pointer-events: none;
+    content: "";
+
+    position: absolute;
+    inset: -8px;
+
+    border: 4px solid var(--text-primary);
+    border-radius: 12px;
+    box-shadow: 0 0 0 4px var(--text-primary);
+  }
+
+  &:hover {
+    background-color: var(--btn-bg-primary-hover);
+    border: var(--text-primary) solid 2px;
+  }
+
+  .hover {
+    background-color: var(--btn-bg-primary-hover);
+    border: var(--text-primary) solid 2px;
+  }
+
+  .disabled {
+    color: var(--btn-bg-primary-disabled);
+
+    background-color: var(--btn-bg-primary-disabled);
+    border: var(--btn-bg-primary-disabled) solid 2px;
+
+    fill: var(--btn-bg-primary-disabled);
+    stroke: var(--btn-bg-primary-disabled);
+  }
+
+  .loader {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
