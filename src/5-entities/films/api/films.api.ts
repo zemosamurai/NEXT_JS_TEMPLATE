@@ -1,24 +1,28 @@
-import { IFilmsResponse, IFilmResponse } from "./types";
-import { instance } from "@/6-shared/api";
+import { IPaginationResponse } from "@/6-shared/types";
+import { IFilm } from "./types";
 
 export const filmsApi = {
-  getFilms: async (): Promise<IFilmsResponse> => {
-    const res = await fetch("https://swapi.tech/api/films", {
-      // cache: "no-cache", // SSR
-      // cache: "force-cache", // SSG
-      next: { revalidate: 60 }, // ISR
-    });
+  getFilms: async (
+    page?: number,
+    search?: string,
+  ): Promise<IPaginationResponse<IFilm>> => {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=10`,
+      {
+        // cache: "no-cache", // SSR
+        // cache: "force-cache", // SSG
+        // next: { revalidate: 60 }, // ISR
+      },
+    );
 
-    return res.json();
-
-    // return instance.get("/films").then((res) => res.data);
+    const resJson = await res.json();
+    return { data: [...resJson], totalCount: 100 };
   },
-  getFilm: async (film_id: string): Promise<IFilmResponse> => {
-    const res = await fetch(`https://swapi.tech/api/films/${film_id}`, {
-      next: { revalidate: 60 },
-    });
-    return res.json();
+  getFilm: async (film_id: string): Promise<IFilm> => {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${film_id}`,
+    );
 
-    // return instance.get(`/films/${film_id}`).then((res) => res.data);
+    return res.json();
   },
 };
