@@ -4,7 +4,7 @@ import { NavLink } from "./navLink/navLink";
 import s from "./styles.module.scss";
 import { ThemeSwitcher } from "@/4-features/themeSwitcher";
 import { useTranslations } from "next-intl";
-import { LogoutButton } from "@/4-features/auth/logoutButton";
+import { LogoutButton } from "@/4-features/auth";
 
 export const Sidebar = () => {
   const t = useTranslations("navigation");
