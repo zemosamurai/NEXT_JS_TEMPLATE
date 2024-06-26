@@ -20,9 +20,7 @@ const authMiddleware = withAuth(
   },
   {
     callbacks: {
-      authorized: ({ token }) => {
-        return token !== null;
-      },
+      authorized: ({ token }) => token !== null,
     },
     pages: {
       signIn: "/login",
@@ -32,9 +30,7 @@ const authMiddleware = withAuth(
 
 export default function middleware(req: NextRequest) {
   const publicPathnameRegex = RegExp(
-    `^(/(${locales.join("|")}))?(${publicRoutes
-      .flatMap((p) => (p === "/" ? ["", "/"] : p))
-      .join("|")})/?$`,
+    `^(/(${locales.join("|")}))?(${publicRoutes.join("|")})?/?$`,
     "i",
   );
 
