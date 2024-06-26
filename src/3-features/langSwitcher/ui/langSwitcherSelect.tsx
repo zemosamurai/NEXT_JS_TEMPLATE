@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, usePathname } from "@/6-shared/lib/i18n";
+import { useRouter, usePathname } from "@/5-shared/lib/i18n";
 import { ChangeEvent, ReactNode, useTransition } from "react";
 
 type IProps = {

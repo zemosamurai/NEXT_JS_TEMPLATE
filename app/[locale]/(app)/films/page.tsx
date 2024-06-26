@@ -1,5 +1,5 @@
-import { FilmsList } from "@/4-features/films";
-import { SearchInput } from "@/6-shared/ui";
+import { FilmsList } from "@/3-features/films";
+import { SearchInput } from "@/5-shared/ui";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 

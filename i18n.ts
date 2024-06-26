@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
-import { locales } from "@/6-shared/lib/i18n";
+import { locales } from "@/5-shared/lib/i18n";
 
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale)) notFound();

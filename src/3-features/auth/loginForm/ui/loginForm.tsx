@@ -2,10 +2,10 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginFormSchema } from "../model/loginForm.schema";
-import { ILoginForm } from "@/5-entities/auth";
+import { ILoginForm } from "@/4-entities/auth";
 
 import s from "./styles.module.scss";
-import { Button, ControlInput } from "@/6-shared/ui";
+import { Button, ControlInput } from "@/5-shared/ui";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 

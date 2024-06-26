@@ -1,5 +1,5 @@
-import { filmsApi } from "@/5-entities/films";
-import { Loader, Pagination } from "@/6-shared/ui";
+import { filmsApi } from "@/4-entities/films";
+import { Loader, Pagination } from "@/5-shared/ui";
 import { Suspense } from "react";
 
 import s from "./styles.module.scss";

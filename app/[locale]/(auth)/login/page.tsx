@@ -1,4 +1,4 @@
-import { LoginForm } from "@/4-features/auth";
+import { LoginForm } from "@/3-features/auth";
 
 export default async function Login() {
   return (

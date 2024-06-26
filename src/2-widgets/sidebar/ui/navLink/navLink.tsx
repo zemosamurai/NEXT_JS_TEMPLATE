@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/6-shared/lib/i18n";
+import { Link } from "@/5-shared/lib/i18n";
 import s from "./styles.module.scss";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";

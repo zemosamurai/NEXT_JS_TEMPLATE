@@ -1,4 +1,4 @@
-import { authApi } from "@/5-entities/auth";
+import { authApi } from "@/4-entities/auth";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 

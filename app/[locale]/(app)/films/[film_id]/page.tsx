@@ -1,4 +1,4 @@
-import { filmsApi } from "@/5-entities/films";
+import { filmsApi } from "@/4-entities/films";
 import { Metadata, ResolvingMetadata } from "next";
 
 interface IProps {

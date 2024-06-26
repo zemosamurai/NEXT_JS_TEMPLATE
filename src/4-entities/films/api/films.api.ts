@@ -1,4 +1,4 @@
-import { IPaginationResponse } from "@/6-shared/types";
+import { IPaginationResponse } from "@/5-shared/types";
 import { IFilm } from "./types";
 
 export const filmsApi = {

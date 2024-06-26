@@ -1,4 +1,4 @@
-import { locales, localePrefix, defaultLocale } from "@/6-shared/lib/i18n";
+import { locales, localePrefix, defaultLocale } from "@/5-shared/lib/i18n";
 import withAuth from "next-auth/middleware";
 import createIntlMiddleware from "next-intl/middleware";
 import { NextRequest } from "next/server";

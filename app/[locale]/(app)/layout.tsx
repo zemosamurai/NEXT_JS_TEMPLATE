@@ -1,4 +1,4 @@
-import { Sidebar } from "@/3-widgets/sidebar";
+import { Sidebar } from "@/2-widgets/sidebar";
 
 import s from "./styles.module.scss";
 

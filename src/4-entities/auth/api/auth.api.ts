@@ -1,4 +1,4 @@
-import { ERoles } from "@/6-shared/access";
+import { ERoles } from "@/5-shared/access";
 import { ILoginForm, ILoginResponse, IMeResponse } from "./types";
 
 const user = {

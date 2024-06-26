@@ -1,5 +1,5 @@
 import s from "./styles.module.scss";
-import { redirect } from "@/6-shared/lib/i18n";
+import { redirect } from "@/5-shared/lib/i18n";
 import { getServerSession } from "next-auth";
 
 export default async function AuthLayout({

@@ -1,4 +1,4 @@
-import { locales } from "@/6-shared/lib/i18n";
+import { locales } from "@/5-shared/lib/i18n";
 import { useLocale } from "next-intl";
 import { LangSwitcherSelect } from "./langSwitcherSelect";
 
