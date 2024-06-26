@@ -1,4 +1,3 @@
-import { ContactsPage } from "@/2-pages/contacts";
 import { Metadata } from "next";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
@@ -6,10 +5,16 @@ interface IProps {
   params: { locale: string };
 }
 
-export default function Contacts({ params: { locale } }: IProps) {
+export default async function Contacts({ params: { locale } }: IProps) {
+  // unstable_setRequestLocale для работы статики
   unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "contacts" });
 
-  return <ContactsPage />;
+  return (
+    <main>
+      <h2>{t("title")}</h2>
+    </main>
+  );
 }
 
 export async function generateMetadata({

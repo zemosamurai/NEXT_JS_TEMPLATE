@@ -4,10 +4,9 @@ import s from "./styles.module.scss";
 
 interface IProps {
   children: React.ReactNode;
-  params: { locale: string };
 }
 
-export default function AppLayout({ children, params: { locale } }: IProps) {
+export default function AppLayout({ children }: IProps) {
   return (
     <section className={s.layout}>
       <Sidebar />

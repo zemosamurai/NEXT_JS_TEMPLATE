@@ -1,5 +1,9 @@
-import { LoginPage } from "@/2-pages/auth";
+import { LoginForm } from "@/4-features/auth";
 
 export default async function Login() {
-  return <LoginPage />;
+  return (
+    <div>
+      <LoginForm />
+    </div>
+  );
 }

@@ -1,4 +1,3 @@
-import { HomePage } from "@/2-pages/home";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
@@ -6,8 +5,14 @@ interface IProps {
   params: { locale: string };
 }
 
-export default function Home() {
-  return <HomePage />;
+export default async function Home({ params: { locale } }: IProps) {
+  const t = await getTranslations({ locale, namespace: "home" });
+
+  return (
+    <main>
+      <h2>{t("title")}</h2>
+    </main>
+  );
 }
 
 export async function generateMetadata({
