@@ -15,4 +15,8 @@ export const linksData = (t: any) => [
     to: "/contacts",
     label: t("contacts"),
   },
+  {
+    to: "/tasks",
+    label: t("tasks"),
+  },
 ];
