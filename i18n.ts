@@ -10,8 +10,8 @@ export default getRequestConfig(async ({ locale }) => {
     films: (await import(`./translation/${locale}/films.json`)).default,
     about: (await import(`./translation/${locale}/about.json`)).default,
     contacts: (await import(`./translation/${locale}/contacts.json`)).default,
-    navigation: (await import(`./translation/${locale}/navigation.json`))
-      .default,
+    navigation: await import(`./translation/${locale}/navigation.json`),
+    tasks: (await import(`./translation/${locale}/tasks.json`)).default,
   };
 
   return {
