@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  border: 1px solid var(--border-primary);
+  background-color: var(--nav-link-active);
+  border-radius: 7px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.deleteBtn {
+  height: 30px;
+  width: 30px;
+  border-radius: 7px;
+  background-color: var(--text-danger);
+}
