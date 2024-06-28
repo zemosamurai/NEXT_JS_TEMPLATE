@@ -1,22 +1,22 @@
 export const linksData = (t: any) => [
   {
-    to: "/home",
-    label: t("home"),
+    to: '/home',
+    label: t('home'),
   },
   {
-    to: "/films",
-    label: t("films"),
+    to: '/films',
+    label: t('films'),
   },
   {
-    to: "/about",
-    label: t("about"),
+    to: '/about',
+    label: t('about'),
   },
   {
-    to: "/contacts",
-    label: t("contacts"),
+    to: '/contacts',
+    label: t('contacts'),
   },
   {
-    to: "/tasks",
-    label: t("tasks"),
+    to: '/tasks',
+    label: t('tasks'),
   },
-];
+]

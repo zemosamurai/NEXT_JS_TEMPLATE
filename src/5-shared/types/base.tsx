@@ -1,4 +1,4 @@
 export interface IPaginationResponse<T> {
-  data: T[];
-  totalCount: number;
+  data: T[]
+  totalCount: number
 }

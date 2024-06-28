@@ -1,5 +1,5 @@
-import s from "./style.module.scss";
+import s from './style.module.scss'
 
 export const Header = () => {
-  return <div>Header</div>;
-};
+  return <div>Header</div>
+}

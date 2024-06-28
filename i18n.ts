@@ -1,9 +1,9 @@
-import { notFound } from "next/navigation";
-import { getRequestConfig } from "next-intl/server";
-import { locales } from "@/5-shared/lib/i18n";
+import { notFound } from 'next/navigation'
+import { getRequestConfig } from 'next-intl/server'
+import { locales } from '@/5-shared/lib/i18n'
 
 export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale)) notFound();
+  if (!locales.includes(locale)) notFound()
 
   const messages = {
     home: (await import(`./translation/${locale}/home.json`)).default,
@@ -12,9 +12,9 @@ export default getRequestConfig(async ({ locale }) => {
     contacts: (await import(`./translation/${locale}/contacts.json`)).default,
     navigation: await import(`./translation/${locale}/navigation.json`),
     tasks: (await import(`./translation/${locale}/tasks.json`)).default,
-  };
+  }
 
   return {
     messages,
-  };
-});
+  }
+})

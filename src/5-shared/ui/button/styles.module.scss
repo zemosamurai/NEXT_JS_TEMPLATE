@@ -27,7 +27,7 @@
 
   &:focus::after {
     pointer-events: none;
-    content: "";
+    content: '';
 
     position: absolute;
     inset: -8px;

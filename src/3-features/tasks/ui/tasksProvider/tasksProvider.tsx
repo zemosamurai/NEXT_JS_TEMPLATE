@@ -1,22 +1,16 @@
-"use client";
+'use client'
 
-import { type ReactNode, createContext, useRef, useContext } from "react";
-import { useStore } from "zustand";
+import { type ReactNode, createContext, useRef, useContext } from 'react'
+import { useStore } from 'zustand'
 
-import {
-  TasksStoreType,
-  createTasksStore,
-  initTasksStore,
-} from "@/4-entities/tasks";
+import { TasksStoreType, createTasksStore, initTasksStore } from '@/4-entities/tasks'
 
-export type TasksStoreApi = ReturnType<typeof createTasksStore>;
+export type TasksStoreApi = ReturnType<typeof createTasksStore>
 
-export const TasksStoreContext = createContext<TasksStoreApi | undefined>(
-  undefined,
-);
+export const TasksStoreContext = createContext<TasksStoreApi | undefined>(undefined)
 
 interface IProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 //  В этом примере мы обеспечиваем безопасность повторного рендеринга этого компонента,
@@ -28,26 +22,20 @@ interface IProps {
 //  которое вызывает перерисовать.
 
 export const CounterStoreProvider = ({ children }: IProps) => {
-  const storeRef = useRef<TasksStoreApi>();
+  const storeRef = useRef<TasksStoreApi>()
   if (!storeRef.current) {
-    storeRef.current = createTasksStore(initTasksStore());
+    storeRef.current = createTasksStore(initTasksStore())
   }
 
-  return (
-    <TasksStoreContext.Provider value={storeRef.current}>
-      {children}
-    </TasksStoreContext.Provider>
-  );
-};
+  return <TasksStoreContext.Provider value={storeRef.current}>{children}</TasksStoreContext.Provider>
+}
 
-export const useTasksStore = <T,>(
-  selector: (store: TasksStoreType) => T,
-): T => {
-  const counterStoreContext = useContext(TasksStoreContext);
+export const useTasksStore = <T,>(selector: (store: TasksStoreType) => T): T => {
+  const counterStoreContext = useContext(TasksStoreContext)
 
   if (!counterStoreContext) {
-    throw new Error(`useTasksStore must be used within CounterStoreProvider`);
+    throw new Error(`useTasksStore must be used within CounterStoreProvider`)
   }
 
-  return useStore(counterStoreContext, selector);
-};
+  return useStore(counterStoreContext, selector)
+}

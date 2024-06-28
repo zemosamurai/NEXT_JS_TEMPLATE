@@ -1,23 +1,23 @@
-"use client";
+'use client'
 
-import { useTheme } from "next-themes";
-import { ChangeEvent, useEffect, useState } from "react";
+import { useTheme } from 'next-themes'
+import { ChangeEvent, useEffect, useState } from 'react'
 
 export const ThemeSwitcher = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   const handleSetTheme = (e: ChangeEvent<HTMLSelectElement>) => {
-    const newTheme = e.currentTarget.value;
-    setTheme(newTheme);
-  };
+    const newTheme = e.currentTarget.value
+    setTheme(newTheme)
+  }
 
   if (!mounted) {
-    return null;
+    return null
   }
 
   return (
@@ -26,5 +26,5 @@ export const ThemeSwitcher = () => {
       <option value="dark">Dark</option>
       <option value="light">Light</option>
     </select>
-  );
-};
+  )
+}

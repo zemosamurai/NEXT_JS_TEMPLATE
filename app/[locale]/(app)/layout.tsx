@@ -1,9 +1,9 @@
-import { Sidebar } from "@/2-widgets/sidebar";
+import { Sidebar } from '@/2-widgets/sidebar'
 
-import s from "./styles.module.scss";
+import s from './styles.module.scss'
 
 interface IProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function AppLayout({ children }: IProps) {
@@ -12,5 +12,5 @@ export default function AppLayout({ children }: IProps) {
       <Sidebar />
       <div className={s.content}>{children}</div>
     </section>
-  );
+  )
 }

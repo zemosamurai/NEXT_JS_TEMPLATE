@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import cn from "classnames";
+import cn from 'classnames'
 import React, {
   ForwardRefExoticComponent,
   ForwardRefRenderFunction,
@@ -10,46 +10,34 @@ import React, {
   forwardRef,
   useId,
   useState,
-} from "react";
+} from 'react'
 
-import s from "./styles.module.scss";
-import ClearIcon from "../../../../public/clear.svg";
+import s from './styles.module.scss'
+import ClearIcon from '../../../../public/clear.svg'
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  floatingLabel?: boolean;
-  error?: string;
-  isFilled?: boolean;
-  isValid?: boolean;
-  rightIcon?: ReactNode;
-  leftIcon?: ReactNode;
-  isClear?: boolean;
+  floatingLabel?: boolean
+  error?: string
+  isFilled?: boolean
+  isValid?: boolean
+  rightIcon?: ReactNode
+  leftIcon?: ReactNode
+  isClear?: boolean
 }
 
 const Input: ForwardRefRenderFunction<unknown, IInputProps> = (
-  {
-    floatingLabel = false,
-    placeholder = "",
-    error,
-    isValid,
-    isFilled,
-    disabled,
-    className,
-    leftIcon,
-    rightIcon,
-    isClear = false,
-    ...rest
-  },
+  { floatingLabel = false, placeholder = '', error, isValid, isFilled, disabled, className, leftIcon, rightIcon, isClear = false, ...rest },
   ref,
 ) => {
-  const [isFocused, setIsFocused] = useState(false);
-  const [value, setValue] = useState<string>("");
-  const id = useId();
+  const [isFocused, setIsFocused] = useState(false)
+  const [value, setValue] = useState<string>('')
+  const id = useId()
 
   // replace with controlled value
-  const isShowClear = !!value && isClear;
+  const isShowClear = !!value && isClear
   const onClear = () => {
-    setValue("");
-  };
+    setValue('')
+  }
 
   return (
     <div className={s.container}>
@@ -88,7 +76,7 @@ const Input: ForwardRefRenderFunction<unknown, IInputProps> = (
         id={id}
         value={value}
         onChange={(event) => setValue(event.currentTarget.value)}
-        placeholder={floatingLabel ? "" : placeholder}
+        placeholder={floatingLabel ? '' : placeholder}
         disabled={disabled}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
@@ -110,11 +98,9 @@ const Input: ForwardRefRenderFunction<unknown, IInputProps> = (
         </label>
       )}
     </div>
-  );
-};
+  )
+}
 
-const ForwardedInput: ForwardRefExoticComponent<
-  IInputProps & RefAttributes<unknown>
-> = forwardRef(Input);
+const ForwardedInput: ForwardRefExoticComponent<IInputProps & RefAttributes<unknown>> = forwardRef(Input)
 
-export { ForwardedInput as Input };
+export { ForwardedInput as Input }

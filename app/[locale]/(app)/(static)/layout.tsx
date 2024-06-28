@@ -1,17 +1,17 @@
-import { locales } from "@/5-shared/lib/i18n";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { locales } from '@/5-shared/lib/i18n'
+import { unstable_setRequestLocale } from 'next-intl/server'
 
 interface IProps {
-  children: React.ReactNode;
-  params: { locale: string };
+  children: React.ReactNode
+  params: { locale: string }
 }
 
 export default function StaticLayout({ children, params: { locale } }: IProps) {
-  unstable_setRequestLocale(locale);
+  unstable_setRequestLocale(locale)
 
-  return children;
+  return children
 }
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return locales.map((locale) => ({ locale }))
 }

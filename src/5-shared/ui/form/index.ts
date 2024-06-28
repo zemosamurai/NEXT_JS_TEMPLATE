@@ -1,1 +1,1 @@
-export { ControlInput } from "./ControlInput/ControlInput";
+export { ControlInput } from './ControlInput/ControlInput'

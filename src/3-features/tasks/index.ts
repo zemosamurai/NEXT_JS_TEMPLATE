@@ -1,1 +1,1 @@
-export { CounterStoreProvider } from "./ui/tasksProvider/tasksProvider";
+export { CounterStoreProvider } from './ui/tasksProvider/tasksProvider'

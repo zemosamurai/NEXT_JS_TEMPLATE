@@ -1,11 +1,11 @@
-"use client";
+'use client'
 
-import { SessionProvider } from "next-auth/react";
+import { SessionProvider } from 'next-auth/react'
 
 interface IProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function AuthProvider({ children }: IProps) {
-  return <SessionProvider>{children}</SessionProvider>;
+  return <SessionProvider>{children}</SessionProvider>
 }

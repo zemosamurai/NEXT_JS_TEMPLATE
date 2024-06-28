@@ -1,50 +1,43 @@
-import classnames from "classnames";
-import React from "react";
+import classnames from 'classnames'
+import React from 'react'
 
-import { DOTS } from "../model/defaultValues";
-import { usePagination } from "../model/usePagination";
-import s from "./styles.module.scss";
+import { DOTS } from '../model/defaultValues'
+import { usePagination } from '../model/usePagination'
+import s from './styles.module.scss'
 
 export interface IPaginationProps {
-  onPageChange: (page: number | string) => void;
-  totalCount: number;
-  currentPage: number;
-  pageSize: number;
-  className?: string;
-  disable?: boolean;
+  onPageChange: (page: number | string) => void
+  totalCount: number
+  currentPage: number
+  pageSize: number
+  className?: string
+  disable?: boolean
 }
 
-export const PaginationComponent = ({
-  currentPage,
-  onPageChange,
-  pageSize,
-  totalCount,
-  disable,
-  className = "",
-}: IPaginationProps) => {
+export const PaginationComponent = ({ currentPage, onPageChange, pageSize, totalCount, disable, className = '' }: IPaginationProps) => {
   const paginationRange = usePagination({
     currentPage,
     totalCount,
     pageSize,
-  });
+  })
 
   if (currentPage === 0 || paginationRange.length < 2) {
-    return null;
+    return null
   }
 
   const onNext = () => {
-    if (currentPage === Math.ceil(totalCount / pageSize)) return;
+    if (currentPage === Math.ceil(totalCount / pageSize)) return
 
-    onPageChange(currentPage + 1);
-  };
+    onPageChange(currentPage + 1)
+  }
 
   const handleChangePage = (page: number) => {
-    if (page === currentPage) return;
+    if (page === currentPage) return
 
-    onPageChange(page as number);
-  };
+    onPageChange(page as number)
+  }
 
-  const lastPage = paginationRange.at(-1);
+  const lastPage = paginationRange.at(-1)
 
   return (
     <ul className={classnames(s.container, [className])}>
@@ -86,9 +79,9 @@ export const PaginationComponent = ({
           )}
           onClick={onNext}
         >
-          <span>Дальше {">"}</span>
+          <span>Дальше {'>'}</span>
         </button>
       </li>
     </ul>
-  );
-};
+  )
+}

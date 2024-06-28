@@ -1,8 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 
-const pathnames = ["/", "/home"];
-const locales = ["en", "ru"];
-const excludePathnames = ["/admin"];
+const pathnames = ['/', '/home']
+const locales = ['en', 'ru']
+const excludePathnames = ['/admin']
 
 module.exports = {
   siteUrl: process.env.BASE_URL,
@@ -10,7 +10,7 @@ module.exports = {
   sitemapSize: 3000,
   exclude: excludePathnames,
   additionalPaths: async (config) => {
-    const combinedArray = [];
+    const combinedArray = []
 
     for (let i = 0; i < pathnames.length; i++) {
       for (let j = 0; j < locales.length; j++) {
@@ -19,12 +19,12 @@ module.exports = {
           changefreq: config.changefreq,
           priority: config.priority,
           lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-        };
+        }
 
-        combinedArray.push(combineItem);
+        combinedArray.push(combineItem)
       }
     }
 
-    return combinedArray;
+    return combinedArray
   },
-};
+}

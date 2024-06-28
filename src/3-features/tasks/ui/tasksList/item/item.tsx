@@ -1,18 +1,18 @@
-import { useTasksStore } from "../../tasksProvider/tasksProvider";
-import s from "./styles.module.scss";
+import { useTasksStore } from '../../tasksProvider/tasksProvider'
+import s from './styles.module.scss'
 
 interface IProps {
-  title: string;
-  description: string;
-  id: number;
+  title: string
+  description: string
+  id: number
 }
 
 export const Item = ({ description, title, id }: IProps) => {
-  const deleteTask = useTasksStore((state) => state.deleteTask);
+  const deleteTask = useTasksStore((state) => state.deleteTask)
 
   const handleDeleteTask = () => {
-    deleteTask(id);
-  };
+    deleteTask(id)
+  }
 
   return (
     <div className={s.item}>
@@ -25,5 +25,5 @@ export const Item = ({ description, title, id }: IProps) => {
         x
       </button>
     </div>
-  );
-};
+  )
+}

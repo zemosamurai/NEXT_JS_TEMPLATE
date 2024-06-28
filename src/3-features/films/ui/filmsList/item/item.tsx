@@ -1,10 +1,10 @@
-import { Link } from "@/5-shared/lib/i18n";
+import { Link } from '@/5-shared/lib/i18n'
 
-import s from "./styles.module.scss";
+import s from './styles.module.scss'
 
 interface IProps {
-  id: number;
-  title: string;
+  id: number
+  title: string
 }
 
 export const Item = ({ id, title }: IProps) => {
@@ -12,5 +12,5 @@ export const Item = ({ id, title }: IProps) => {
     <Link href={`/films/${id}`} className={s.item}>
       {title}
     </Link>
-  );
-};
+  )
+}

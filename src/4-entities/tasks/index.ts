@@ -1,5 +1,1 @@
-export {
-  createTasksStore,
-  type TasksStoreType,
-  initTasksStore,
-} from "./model/tasks.store";
+export { createTasksStore, type TasksStoreType, initTasksStore } from './model/tasks.store'
