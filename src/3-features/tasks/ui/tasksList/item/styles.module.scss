@@ -1,10 +1,12 @@
 .item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
   padding: 15px 10px;
-  border: 1px solid var(--border-primary);
+
   background-color: var(--nav-link-active);
+  border: 1px solid var(--border-primary);
   border-radius: 7px;
 }
 
@@ -15,8 +17,8 @@
 }
 
 .deleteBtn {
-  height: 30px;
   width: 30px;
-  border-radius: 7px;
+  height: 30px;
   background-color: var(--text-danger);
+  border-radius: 7px;
 }

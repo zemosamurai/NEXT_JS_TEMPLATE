@@ -1,11 +1,13 @@
 .form {
-  width: 500px;
-  background-color: var(--foreground);
-  padding: 20px;
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  width: 500px;
+  padding: 20px;
+
+  background-color: var(--foreground);
+  border-radius: 20px;
 }
 
 .title {
