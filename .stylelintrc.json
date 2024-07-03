@@ -1,0 +1,40 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-clean-order"],
+  "rules": {
+    "selector-max-id": [
+      0,
+      {
+        "message": "Expected \"%s\" ID selector can not use"
+      }
+    ],
+    "selector-class-pattern": [
+      "^[a-zA-Z]+(?:[a-z][a-zA-Z]*)*$",
+      {
+        "message": "Expected class selector \"%s\" to be camelCase"
+      }
+    ],
+    "keyframes-name-pattern": [
+      "^[a-zA-Z]+(?:[a-z][a-zA-Z]*)*$",
+      {
+        "message": "Expected keyframe name \"%s\" to be camelCase"
+      }
+    ],
+    "custom-property-pattern": null,
+
+    "declaration-property-unit-allowed-list": {
+      "font-size": ["rem", "px"],
+      "width": ["rem", "px", "%", "vw"],
+      "height": ["rem", "px", "%", "vh"],
+      "/^padding/": ["rem", "px"],
+      "/^margin/": ["rem", "px"],
+      "/^animation/": "s"
+    },
+    "max-nesting-depth": 5,
+
+    "media-feature-range-notation": ["prefix", { "severity": "warning" }],
+
+    "alpha-value-notation": "number",
+    "font-weight-notation": "numeric",
+    "color-function-notation": ["legacy", { "severity": "warning" }]
+  }
+}

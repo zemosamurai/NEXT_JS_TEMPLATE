@@ -8,8 +8,10 @@
     "build:prod": "copy .env.prod .env.local && next build && npm run postbuild",
     "build:dev": "copy .env.dev .env.local && next build && npm run postbuild",
     "postbuild": "next-sitemap",
-    "lint": "next lint",
-    "prettier": "prettier -w ."
+    "lint": "next lint --fix",
+    "prettier": "prettier -w .",
+    "stylelint": "stylelint \"**/*.scss\" --fix",
+    "precommit": "npm run prettier && npm run lint && npm run stylelint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -27,15 +29,22 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.2.5",
     "sass": "^1.74.1",
+    "stylelint": "^16.6.1",
+    "stylelint-config-clean-order": "^6.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5"
   }
 }

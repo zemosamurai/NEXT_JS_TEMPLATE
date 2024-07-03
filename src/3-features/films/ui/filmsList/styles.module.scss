@@ -1,12 +1,12 @@
 .root {
-  height: calc(100% - 64px);
   display: flex;
   flex-direction: column;
+  height: calc(100% - 64px);
 }
 
 .listWrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   flex-grow: 1;
+  gap: 10px;
 }

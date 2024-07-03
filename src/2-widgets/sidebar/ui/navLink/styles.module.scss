@@ -1,11 +1,13 @@
 .link {
-  width: 100%;
-  height: 46px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-radius: 8px;
+
+  width: 100%;
+  height: 46px;
   padding: 0 12px;
+
+  border-radius: 8px;
 
   &:hover:not(.active) {
     background-color: var(--nav-link-hover);

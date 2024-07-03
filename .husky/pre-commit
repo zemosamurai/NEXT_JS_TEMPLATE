@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PROTECTED_BRANCHES="^(main|dev)"
+
+if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
+then
+  echo -e "\n🚫Branch - $BRANCH, protected,create new branch from '$BRANCH' and create Pull Request."
+  exit 1
+fi
+
+npx lint-staged
+
+echo -e "Commit success"
+
+exit 0
+
+
